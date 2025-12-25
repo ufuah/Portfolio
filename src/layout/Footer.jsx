@@ -1,7 +1,7 @@
 import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
+  { icon: Github, href: "https://github.com/ufuah", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
 ];
@@ -26,7 +26,7 @@ export const Footer = () => {
               PM<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Pedro Machado. All rights reserved.
+              © {currentYear} Emmanuel Ufuah afa scotly. All rights reserved.
             </p>
           </div>
 

@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Lagos, Nigeria (Lekki Axis)",
     href: "#",
   },
 ];
