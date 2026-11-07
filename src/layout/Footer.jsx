@@ -1,9 +1,13 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/ufuah", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/emmanuel-ufuah-b2727b162",
+    label: "LinkedIn",
+  },
+  { icon: Twitter, href: "https://x.com/Scotly_ema", label: "Twitter" },
 ];
 
 const footerLinks = [
@@ -23,10 +27,10 @@ export const Footer = () => {
           {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
-              PM<span className="text-primary">.</span>
+              Scotlyema<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Emmanuel Ufuah afa scotly. All rights reserved.
+              © {currentYear} Emmanuel Ufuah aka Scotly. All rights reserved.
             </p>
           </div>
 
@@ -49,6 +53,8 @@ export const Footer = () => {
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
               >
