@@ -1,4 +1,6 @@
+import { Button } from "@/components/Button";
 import {
+  ArrowRight,
   ChevronDown,
   Github,
   Linkedin,
@@ -6,6 +8,14 @@ import {
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
+const CONTACT_EMAIL = "ufuahemi@gmail.com";
+const EMAIL_SUBJECT = "Project enquiry";
+const EMAIL_BODY =
+  "Hi Emmanuel,\n\nI came across your portfolio and would like to discuss a project.\n\n";
+const MAILTO_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  EMAIL_SUBJECT
+)}&body=${encodeURIComponent(EMAIL_BODY)}`;
 
 // File lives in /public/Emmanuel-Ufuah-Resume.pdf
 const CV_URL = "/Emmanuel-Ufuah-Resume.pdf";
@@ -32,6 +42,10 @@ const skills = [
   "AWS",
   "Coolify",
 ];
+
+const handleContact = () => {
+  window.location.href = MAILTO_URL;
+};
 
 const handleDownloadCv = () => {
   const link = document.createElement("a");
@@ -106,10 +120,18 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <AnimatedBorderButton onClick={handleDownloadCv}>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              {/* "contents" wrappers add the click behaviour without touching the buttons' own markup, size or styles */}
+              <span className="contents" onClick={handleContact}>
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </span>
+              <span className="contents" onClick={handleDownloadCv}>
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </span>
             </div>
 
             {/* Social Links */}
