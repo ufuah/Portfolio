@@ -11,23 +11,24 @@ import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
   "React",
+  "React Native",
+  "Expo",
   "Next.js",
   "TypeScript",
   "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
-  "Tailwind CSS",
+  "Express",
+  "MySQL",
   "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
-  "Git",
-  "GitHub Actions",
+  "Redis",
+  "BullMQ",
+  "FastAPI",
+  "Zustand",
+  "TanStack Query",
+  "React Three Fiber",
+  "Paystack",
+  "Tailwind CSS",
+  "Docker",
+  "Coolify",
 ];
 
 export const Hero = () => {
@@ -69,7 +70,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Full-Stack Developer • React &amp; React Native
               </span>
             </div>
 
@@ -85,9 +86,10 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Emmanuel Ufuah — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Emmanuel Ufuah — a full-stack developer building mobile
+                apps, web platforms and backends for businesses, from food
+                delivery and real estate to inventory management and
+                e-commerce.
               </p>
             </div>
 
@@ -121,7 +123,7 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
@@ -133,7 +135,7 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/1768420148668_1.jpeg"
-                  alt="Pedro Machado"
+                  alt="Emmanuel Ufuah"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
