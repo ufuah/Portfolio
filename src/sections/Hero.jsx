@@ -39,6 +39,7 @@ const skills = [
   "Paystack",
   "Tailwind CSS",
   "Docker",
+  "AWS",
   "Coolify",
 ];
 
