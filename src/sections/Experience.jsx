@@ -1,38 +1,56 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "2025 — Present",
+    role: "Food Delivery Platform",
+    company: "PalateOasis · Multi-city, Nigeria",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Full-stack build of a food delivery platform serving multiple Nigerian cities: React Native app with animated stories and a coverflow promo carousel, wallet system, rider dispatch, live socket management, Redis-cached store menus, and a Python recommendation microservice. Ships through EAS builds and OTA updates, with a companion store-owner app.",
+    technologies: ["React Native", "Expo", "Node.js", "MySQL", "FastAPI", "Redis"],
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    period: "2026",
+    role: "Real Estate App with 3D Onboarding",
+    company: "Nockspot",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
+      "Mobile real estate app with an immersive 3D door onboarding built in React Three Fiber, a custom floating tab bar and property detail experience, plus a Next.js admin dashboard. Built the backend from scratch with dual JWT auth and a wallet and payment architecture, deployed on a VPS with Coolify and Traefik.",
+    technologies: ["React Native", "Three.js", "Next.js", "Zustand", "Node.js", "Paystack"],
     current: false,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    period: "2026",
+    role: "Inventory & Sales Management System",
+    company: "ACS Roofings",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
+      "Stock and sales system covering reservations, returns, exchanges and damage adjustments, with low-stock alerts and automated period close-outs that snapshot history and roll opening stock forward on a configurable schedule. Includes a calendar view for browsing past periods and Excel export.",
+    technologies: ["React", "Zustand", "Node.js", "Express", "MySQL", "node-cron"],
     current: false,
   },
   {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
+    period: "2026",
+    role: "Fashion E-commerce Marketplace",
+    company: "SHIOMA HUB",
     description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Fashion marketplace for clothing, footwear, accessories and beauty, with a premium brand identity, a Seller Center dashboard for independent brands, and a modular TypeScript backend handling payments, background job queues, caching, and S3-compatible product image storage with a swappable provider layer.",
+    technologies: ["React", "TypeScript", "Zustand", "Prisma", "Redis", "BullMQ", "Paystack"],
+    current: false,
+  },
+  {
+    period: "2024",
+    role: "Hair & Beauty Website",
+    company: "Hairlord Beauty · hairlordbeauty.com",
+    description:
+      "Live website for the Hairlord Beauty hair brand, designed and built end to end.",
+    technologies: [],
+    current: false,
+  },
+  {
+    period: "2026",
+    role: "Partner Portal",
+    company: "Pluto · Cloud Services",
+    description:
+      "Partner portal that lets resellers offer Pluto's cloud services to their own customers under their own brand, with customer sign-up and billing handled on the partner's page while Pluto stays invisible in the background.",
+    technologies: ["Partner Portal", "Cloud Services"],
     current: false,
   },
 ];
@@ -52,17 +70,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Selected Work
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Products I've{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              built and shipped.
             </span>
           </h2>
 
@@ -70,8 +88,9 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A freelance developer and 3D artist working under Render0 Studios,
+            delivering mobile apps, backends and product visuals for clients
+            across Nigeria and beyond.
           </p>
         </div>
 
