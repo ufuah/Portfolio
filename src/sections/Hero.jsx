@@ -43,6 +43,19 @@ const skills = [
   "Coolify",
 ];
 
+const handleContact = () => {
+  window.location.href = MAILTO_URL;
+};
+
+const handleDownloadCv = () => {
+  const link = document.createElement("a");
+  link.href = CV_URL;
+  link.download = "Emmanuel-Ufuah-Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -107,17 +120,13 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <a href={MAILTO_URL}>
-                <Button size="lg">
-                  Contact Me <ArrowRight className="w-5 h-5" />
-                </Button>
-              </a>
-              <a href={CV_URL} download="Emmanuel-Ufuah-Resume.pdf">
-                <AnimatedBorderButton>
-                  <Download className="w-5 h-5" />
-                  Download CV
-                </AnimatedBorderButton>
-              </a>
+              <Button size="lg" onClick={handleContact}>
+                Contact Me <ArrowRight className="w-5 h-5" />
+              </Button>
+              <AnimatedBorderButton onClick={handleDownloadCv}>
+                <Download className="w-5 h-5" />
+                Download CV
+              </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
