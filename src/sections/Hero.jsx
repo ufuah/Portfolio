@@ -9,6 +9,17 @@ import {
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
+const CONTACT_EMAIL = "ufuahemi@gmail.com";
+const EMAIL_SUBJECT = "Project enquiry";
+const EMAIL_BODY =
+  "Hi Emmanuel,\n\nI came across your portfolio and would like to discuss a project.\n\n";
+const MAILTO_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  EMAIL_SUBJECT
+)}&body=${encodeURIComponent(EMAIL_BODY)}`;
+
+// File lives in /public/Emmanuel-Ufuah-Resume.pdf
+const CV_URL = "/Emmanuel-Ufuah-Resume.pdf";
+
 const skills = [
   "React",
   "React Native",
@@ -95,13 +106,17 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a href={MAILTO_URL}>
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href={CV_URL} download="Emmanuel-Ufuah-Resume.pdf">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
@@ -109,12 +124,17 @@ export const Hero = () => {
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: Github, href: "https://github.com/ufuah" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/emmanuel-ufuah-b2727b162",
+                },
+                { icon: Twitter, href: "https://x.com/Scotly_ema" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
