@@ -4,35 +4,52 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Sarah Chen",
-    role: "CTO, Tech Innovators Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "Emmanuel is a talented developer who understands how to turn ideas into functional products. His attention to detail and problem-solving approach really stand out.",
+    author: "Abaisor Success",
+    role: "Client",
+    // avatar: "/testimonials/abaisor.jpg",
   },
   {
     quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Rodriguez",
-    role: "Product Manager, Digital Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "Working with Emmanuel was a great experience. He understands technical requirements quickly and knows how to bring ideas to life through clean and functional solutions.",
+    author: "Okotete Emmanuel",
+    role: "Project Collaborator",
+    // avatar: "/testimonials/okotete.jpg",
   },
   {
     quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Watson",
-    role: "Engineering Lead, StartUp Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+      "Emmanuel combines creativity with strong technical skills. I appreciate his commitment to delivering quality work and finding solutions when challenges arise.",
+    author: "Sule Victoria",
+    role: "Business Owner",
+    // avatar: "/testimonials/sule.jpg",
   },
   {
     quote:
-      "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
-    author: "David Kim",
-    role: "CEO, Innovation Hub",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "What I appreciate most about Emmanuel is his ability to understand an idea and turn it into something practical. He's creative, thoughtful and committed to quality.",
+    author: "Ochuko",
+    role: "Project Collaborator",
+    // avatar: "/testimonials/ochuko.jpg",
+  },
+  {
+    quote:
+      "Emmanuel has a good eye for detail and understands how technology can solve real problems. His dedication to his work is something I genuinely admire.",
+    author: "Solomon",
+    role: "Client",
+    // avatar: "/testimonials/solomon.jpg",
+  },
+  {
+    quote:
+      "He's someone who takes his work seriously. I appreciate his willingness to listen, understand requirements and work towards delivering exactly what's needed.",
+    author: "Miracle",
+    role: "Business Owner",
+    // avatar: "/testimonials/miracle.jpg",
+  },
+  {
+    quote:
+      "Emmanuel brings a combination of creativity, technical knowledge and problem-solving skills. He's always looking for ways to improve what he's building.",
+    author: "Runa",
+    role: "Project Collaborator",
+    // avatar: "/testimonials/runa.jpg",
   },
 ];
 
@@ -48,6 +65,7 @@ export const Testimonials = () => {
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
   };
+
   return (
     <section id="testimonials" className="py-32 relative overflow-hidden">
       <div
@@ -55,32 +73,15 @@ export const Testimonials = () => {
        w-[800px] h-[800px] bg-primary/5
         rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
       />
-      <div
-        className="container mx-auto 
-      px-6 relative z-10"
-      >
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div
-          className="text-center max-w-3xl 
-        mx-auto mb-16"
-        >
-          <span
-            className="text-secondary-foreground 
-          text-sm font-medium tracking-wider 
-          uppercase animate-fade-in"
-          >
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             What People Say
           </span>
-          <h2
-            className="text-4xl md:text-5xl 
-          font-bold mt-4 mb-6 animate-fade-in 
-          animation-delay-100 text-secondary-foreground"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Kind words from{" "}
-            <span
-              className="font-serif italic 
-            font-normal text-white"
-            >
+            <span className="font-serif italic font-normal text-white">
               amazing people.
             </span>
           </h2>
@@ -100,11 +101,11 @@ export const Testimonials = () => {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <img
+                {/* <img
                   src={testimonials[activeIdx].avatar}
                   alt={testimonials[activeIdx].author}
                   className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                />
+                /> */}
                 <div>
                   <div className="font-semibold">
                     {testimonials[activeIdx].author}
@@ -128,6 +129,7 @@ export const Testimonials = () => {
               <div className="flex gap-2">
                 {testimonials.map((_, idx) => (
                   <button
+                    key={idx}
                     onClick={() => setActiveIdx(idx)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
                       idx === activeIdx
