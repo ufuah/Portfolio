@@ -1,6 +1,41 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+
+  
+  
+  {
+  title: "Shaatuu",
+  description:
+    "A creative digital platform with a modern interface, interactive touches and a polished frontend.",
+  image: "/projects/shaatuu.png",
+  tags: ["React", "Next.js"],
+  link: "https://www.shaatuu.com/",
+  github: "#",
+},
+{
+  title: "Klonex",
+  description:
+    "Corporate website for a UK technology company, with sleek positioning and service-focused content.",
+  image: "/projects/klonex.png",
+  tags: ["WordPress", "SEO"],
+  link: "https://klonex.co.uk",
+  github: "#",
+},
+{
+  title: "Chelsea Pharmacy",
+  description:
+    "London pharmacy site pairing an online store of 4,000+ products with bookable clinical services and virtual consultations.",
+  image: "/projects/chelsea-pharmacy.png",
+  tags: ["E-commerce", "Booking"],
+  link: "https://chelseapharmacy.co.uk",
+  github: "#",
+},
+  
+  
+  
+  
+  
   {
     title: "Fintech Dashboard",
     description:
