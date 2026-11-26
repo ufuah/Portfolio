@@ -63,7 +63,8 @@ export const Hero = () => {
       <div className="absolute inset-0">
         <img
           src="/hero-bg.jpg"
-          alt="Hero image"
+          alt=""
+          aria-hidden="true"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
@@ -165,7 +166,10 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/1768420148668_1.jpeg"
-                  alt="Emmanuel Ufuah"
+                  alt="Portrait of Emmanuel Ufuah, full-stack developer"
+                  width="800"
+                  height="1000"
+                  fetchpriority="high"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
